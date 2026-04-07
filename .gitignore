@@ -1,0 +1,4 @@
+crimeenv/
+__pycache__/
+.env
+.vscode/
