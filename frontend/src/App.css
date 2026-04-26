@@ -1,38 +1,37 @@
+/* 1. THE CRITICAL FIX: Ensure the browser calculates a height > 0 */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents double scrollbars */
+  background-color: #0a1628; /* Matches your dark theme */
+}
+
+/* 2. LAYOUT: Makes the App take the full height */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
+/* 3. MAP FIX: Ensure Leaflet stretches properly */
+.leaflet-container {
+  height: 100% !important;
+  width: 100%;
+  background: #1a1a1a; /* Dark background before tiles load */
 }
 
+/* 4. DASHBOARD STYLING */
+.dashboard-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Smooth spin for your logo if you're still using it */
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
