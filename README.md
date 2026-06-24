@@ -19,7 +19,9 @@ The system is divided into three specialized nodes:
 
 ## 💉 Connectivity Flow
 The data pulse moves through the following pipeline:
-`Ramandeep (Data)` → `crimes_clean.csv + crime_model.pkl` → `Rakhi (Backend)` → `/predict & /crimes` → `Navneet (Frontend)` → `Heatmap + Alerts`
+`Ramandeep (Data)` → `crimes_clean.csv + crime_model.pkl` →
+`Rakhi (Backend)` → `/predict & /crimes` → 
+`Navneet (Frontend)` → `Heatmap + Alerts`
 
 ---
 
